@@ -1712,10 +1712,7 @@
        <attribute name="title">
         <string>Collect</string>
        </attribute>
-       <layout class="QFormLayout" name="formLayout_9">
-        <property name="fieldGrowthPolicy">
-         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-        </property>
+       <layout class="QFormLayout" name="formLayout_6">
         <item row="0" column="0">
          <widget class="QGroupBox" name="groupBox_10">
           <property name="title">
@@ -1723,7 +1720,10 @@
           </property>
           <layout class="QFormLayout" name="formLayout_4">
            <item row="0" column="0">
-            <layout class="QGridLayout" name="gridLayout_29" columnminimumwidth="110,110,110">
+            <layout class="QGridLayout" name="gridLayout_29" columnminimumwidth="120,110,110">
+             <property name="bottomMargin">
+              <number>10</number>
+             </property>
              <item row="1" column="0">
               <widget class="QLabel" name="label_45">
                <property name="text">
@@ -1961,7 +1961,7 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="0">
+             <item row="7" column="0">
               <widget class="QLabel" name="label_57">
                <property name="text">
                 <string>Image counter</string>
@@ -1971,7 +1971,7 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="2">
+             <item row="7" column="2">
               <widget class="QELabel" name="qelabel_41">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
@@ -2038,6 +2038,63 @@
                </property>
                <property name="variable" stdset="0">
                 <string>$(P):cam1:AndorEMGainMode_RBV</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=ANDOR1</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0">
+              <widget class="QLabel" name="label_95">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>EM Gain Advanced</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="1">
+              <widget class="QEComboBox" name="qecombobox_28">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):cam1:AndorEMGainAdvanced</string>
+               </property>
+               <property name="variableSubstitutions" stdset="0">
+                <string>P=ANDOR1</string>
+               </property>
+               <property name="subscribe">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="2">
+              <widget class="QELabel" name="qelabel_91">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="variable" stdset="0">
+                <string>$(P):cam1:AndorEMGainAdvanced_RBV</string>
                </property>
                <property name="variableSubstitutions" stdset="0">
                 <string>P=ANDOR1</string>

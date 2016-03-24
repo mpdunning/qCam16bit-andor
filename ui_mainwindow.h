@@ -140,7 +140,7 @@ public:
     QLabel *label_94;
     QELabel *qelabel_88;
     QWidget *Collect;
-    QFormLayout *formLayout_9;
+    QFormLayout *formLayout_6;
     QGroupBox *groupBox_10;
     QFormLayout *formLayout_4;
     QGridLayout *gridLayout_29;
@@ -164,6 +164,9 @@ public:
     QLabel *label_84;
     QEComboBox *qecombobox_24;
     QELabel *qelabel_46;
+    QLabel *label_95;
+    QEComboBox *qecombobox_28;
+    QELabel *qelabel_91;
     QSpacerItem *horizontalSpacer_7;
     QGroupBox *groupBox_11;
     QGridLayout *gridLayout_17;
@@ -1130,15 +1133,15 @@ public:
         tabWidget_qCam->addTab(Readout, QString());
         Collect = new QWidget();
         Collect->setObjectName(QStringLiteral("Collect"));
-        formLayout_9 = new QFormLayout(Collect);
-        formLayout_9->setObjectName(QStringLiteral("formLayout_9"));
-        formLayout_9->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
+        formLayout_6 = new QFormLayout(Collect);
+        formLayout_6->setObjectName(QStringLiteral("formLayout_6"));
         groupBox_10 = new QGroupBox(Collect);
         groupBox_10->setObjectName(QStringLiteral("groupBox_10"));
         formLayout_4 = new QFormLayout(groupBox_10);
         formLayout_4->setObjectName(QStringLiteral("formLayout_4"));
         gridLayout_29 = new QGridLayout();
         gridLayout_29->setObjectName(QStringLiteral("gridLayout_29"));
+        gridLayout_29->setContentsMargins(-1, -1, -1, 10);
         label_45 = new QLabel(groupBox_10);
         label_45->setObjectName(QStringLiteral("label_45"));
         label_45->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
@@ -1246,14 +1249,14 @@ public:
         label_57->setObjectName(QStringLiteral("label_57"));
         label_57->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
-        gridLayout_29->addWidget(label_57, 6, 0, 1, 1);
+        gridLayout_29->addWidget(label_57, 7, 0, 1, 1);
 
         qelabel_41 = new QELabel(groupBox_10);
         qelabel_41->setObjectName(QStringLiteral("qelabel_41"));
         sizePolicy5.setHeightForWidth(qelabel_41->sizePolicy().hasHeightForWidth());
         qelabel_41->setSizePolicy(sizePolicy5);
 
-        gridLayout_29->addWidget(qelabel_41, 6, 2, 1, 1);
+        gridLayout_29->addWidget(qelabel_41, 7, 2, 1, 1);
 
         label_84 = new QLabel(groupBox_10);
         label_84->setObjectName(QStringLiteral("label_84"));
@@ -1278,18 +1281,41 @@ public:
 
         gridLayout_29->addWidget(qelabel_46, 5, 2, 1, 1);
 
-        gridLayout_29->setColumnMinimumWidth(0, 110);
+        label_95 = new QLabel(groupBox_10);
+        label_95->setObjectName(QStringLiteral("label_95"));
+        label_95->setMinimumSize(QSize(0, 0));
+        label_95->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_29->addWidget(label_95, 6, 0, 1, 1);
+
+        qecombobox_28 = new QEComboBox(groupBox_10);
+        qecombobox_28->setObjectName(QStringLiteral("qecombobox_28"));
+        sizePolicy4.setHeightForWidth(qecombobox_28->sizePolicy().hasHeightForWidth());
+        qecombobox_28->setSizePolicy(sizePolicy4);
+        qecombobox_28->setMinimumSize(QSize(100, 0));
+        qecombobox_28->setSubscribe(true);
+
+        gridLayout_29->addWidget(qecombobox_28, 6, 1, 1, 1);
+
+        qelabel_91 = new QELabel(groupBox_10);
+        qelabel_91->setObjectName(QStringLiteral("qelabel_91"));
+        sizePolicy5.setHeightForWidth(qelabel_91->sizePolicy().hasHeightForWidth());
+        qelabel_91->setSizePolicy(sizePolicy5);
+
+        gridLayout_29->addWidget(qelabel_91, 6, 2, 1, 1);
+
+        gridLayout_29->setColumnMinimumWidth(0, 120);
         gridLayout_29->setColumnMinimumWidth(1, 110);
         gridLayout_29->setColumnMinimumWidth(2, 110);
 
         formLayout_4->setLayout(0, QFormLayout::LabelRole, gridLayout_29);
 
 
-        formLayout_9->setWidget(0, QFormLayout::LabelRole, groupBox_10);
+        formLayout_6->setWidget(0, QFormLayout::LabelRole, groupBox_10);
 
         horizontalSpacer_7 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        formLayout_9->setItem(0, QFormLayout::FieldRole, horizontalSpacer_7);
+        formLayout_6->setItem(0, QFormLayout::FieldRole, horizontalSpacer_7);
 
         groupBox_11 = new QGroupBox(Collect);
         groupBox_11->setObjectName(QStringLiteral("groupBox_11"));
@@ -1324,11 +1350,11 @@ public:
         gridLayout_17->addWidget(label_59, 0, 0, 1, 1);
 
 
-        formLayout_9->setWidget(1, QFormLayout::LabelRole, groupBox_11);
+        formLayout_6->setWidget(1, QFormLayout::LabelRole, groupBox_11);
 
         verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        formLayout_9->setItem(2, QFormLayout::LabelRole, verticalSpacer_5);
+        formLayout_6->setItem(2, QFormLayout::LabelRole, verticalSpacer_5);
 
         tabWidget_qCam->addTab(Collect, QString());
         Stats = new QWidget();
@@ -2995,6 +3021,11 @@ public:
         qecombobox_24->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=ANDOR1", 0)));
         qelabel_46->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:AndorEMGainMode_RBV", 0)));
         qelabel_46->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=ANDOR1", 0)));
+        label_95->setText(QApplication::translate("MainWindow", "EM Gain Advanced", 0));
+        qecombobox_28->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:AndorEMGainAdvanced", 0)));
+        qecombobox_28->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=ANDOR1", 0)));
+        qelabel_91->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:AndorEMGainAdvanced_RBV", 0)));
+        qelabel_91->setProperty("variableSubstitutions", QVariant(QApplication::translate("MainWindow", "P=ANDOR1", 0)));
         groupBox_11->setTitle(QString());
         label_76->setText(QApplication::translate("MainWindow", "* Used in Fixed Rate Trigger Mode only.", 0));
         qelabel_45->setProperty("variable", QVariant(QApplication::translate("MainWindow", "$(P):cam1:AcquirePeriod_RBV", 0)));
