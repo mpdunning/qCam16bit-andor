@@ -1,3 +1,7 @@
 .__afs*
 *.bak
+arch-64/qCam
+obj/main.o
+obj/mainwindow.o
+
 
