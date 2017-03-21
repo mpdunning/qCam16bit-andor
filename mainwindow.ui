@@ -523,7 +523,7 @@
                <bool>false</bool>
               </property>
               <property name="value">
-               <double>0.000000000000000</double>
+               <double>0.001000000000000</double>
               </property>
              </widget>
             </item>
@@ -715,10 +715,10 @@
          <property name="variable" stdset="0">
           <string/>
          </property>
-         <property name="altReadbackVariable" stdset="0">
+         <property name="variableSubstitutions" stdset="0">
           <string/>
          </property>
-         <property name="variableSubstitutions" stdset="0">
+         <property name="altReadbackVariable" stdset="0">
           <string/>
          </property>
          <property name="writeOnPress">
@@ -944,7 +944,7 @@
            <enum>QEImage::Fit</enum>
           </property>
           <property name="zoom">
-           <number>100</number>
+           <number>112</number>
           </property>
           <property name="enableImageDisplayProperties">
            <bool>true</bool>
@@ -2228,6 +2228,109 @@
             <layout class="QGridLayout" name="gridLayout_12">
              <item row="0" column="0">
               <layout class="QGridLayout" name="gridLayout_13">
+               <item row="14" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_51">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>On</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>2</string>
+                     <string>--enable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_52">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Off</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>2</string>
+                     <string>--disable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_23">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="15" column="0">
+                <widget class="QLabel" name="label_98">
+                 <property name="text">
+                  <string>ROI 3 Stats</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
                <item row="6" column="2">
                 <widget class="QELabel" name="qelabel_61">
                  <property name="variable" stdset="0">
@@ -2818,25 +2921,6 @@
                  </property>
                 </widget>
                </item>
-               <item row="12" column="1">
-                <widget class="QEComboBox" name="qecombobox_17">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="variable" stdset="0">
-                  <string>$(P):Stats1:ComputeHistogram</string>
-                 </property>
-                 <property name="variableSubstitutions" stdset="0">
-                  <string>P=ANDOR1</string>
-                 </property>
-                 <property name="subscribe">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
                <item row="12" column="2">
                 <widget class="QEPushButton" name="qepushbutton_18">
                  <property name="sizePolicy">
@@ -2872,6 +2956,477 @@
                   <string/>
                  </property>
                 </widget>
+               </item>
+               <item row="12" column="1">
+                <widget class="QEComboBox" name="qecombobox_17">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="variable" stdset="0">
+                  <string>$(P):Stats1:ComputeHistogram</string>
+                 </property>
+                 <property name="variableSubstitutions" stdset="0">
+                  <string>P=ANDOR1</string>
+                 </property>
+                 <property name="subscribe">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_49">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>On</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>1</string>
+                     <string>--enable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_50">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Off</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>1</string>
+                     <string>--disable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_22">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="14" column="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_56">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>ROI 2...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=ROI2:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_59">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Stats 2...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=Stats2:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDStats.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="15" column="1">
+                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_53">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>On</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>3</string>
+                     <string>--enable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_54">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>40</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Off</string>
+                   </property>
+                   <property name="program">
+                    <string>/afs/slac/g/testfac/extras/scripts/ADROIStats.sh</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>$(P)</string>
+                     <string>3</string>
+                     <string>--disable</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_24">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item row="13" column="0">
+                <widget class="QLabel" name="label_96">
+                 <property name="text">
+                  <string>ROI 1 Stats</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="14" column="0">
+                <widget class="QLabel" name="label_97">
+                 <property name="text">
+                  <string>ROI 2 Stats</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="13" column="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_55">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>ROI 1...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=ROI1:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_58">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Stats 1...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=Stats1:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDStats.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="15" column="2">
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_57">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>ROI 3...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=ROI3:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QEPushButton" name="qepushbutton_60">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Stats 3...</string>
+                   </property>
+                   <property name="program">
+                    <string>edm</string>
+                   </property>
+                   <property name="arguments">
+                    <stringlist>
+                     <string>-x</string>
+                     <string>-eolc</string>
+                     <string>-m P=$(P):,R=Stats3:</string>
+                     <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDStats.edl</string>
+                    </stringlist>
+                   </property>
+                   <property name="guiFile" stdset="0">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
                </item>
               </layout>
              </item>
@@ -3410,7 +3965,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI1</string>
+                     <string>1</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -3448,7 +4003,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI1</string>
+                     <string>1</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -3596,7 +4151,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI2</string>
+                     <string>2</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -3634,7 +4189,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI2</string>
+                     <string>2</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -3802,7 +4357,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI3</string>
+                     <string>3</string>
                      <string>--enable</string>
                     </stringlist>
                    </property>
@@ -3840,7 +4395,7 @@
                    <property name="arguments">
                     <stringlist>
                      <string>$(P)</string>
-                     <string>ROI3</string>
+                     <string>3</string>
                      <string>--disable</string>
                     </stringlist>
                    </property>
@@ -5190,665 +5745,753 @@
        <attribute name="title">
         <string>More</string>
        </attribute>
-       <widget class="QGroupBox" name="groupBox_6">
-        <property name="geometry">
-         <rect>
-          <x>9</x>
-          <y>9</y>
-          <width>280</width>
-          <height>104</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>280</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Viewers / Utilities</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_8">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_11">
+       <layout class="QFormLayout" name="formLayout_9">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>100</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>280</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Viewers / Utilities</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_8">
            <item row="0" column="0">
-            <widget class="QEPushButton" name="qepushbutton_4">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>10000</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>ImageJ</string>
-             </property>
-             <property name="program">
-              <string>/afs/slac/g/testfac/extras/scripts/startImageJ</string>
-             </property>
-             <property name="arguments">
-              <stringlist>
-               <string>$(P)</string>
-              </stringlist>
-             </property>
-             <property name="guiFile" stdset="0">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QEPushButton" name="qepushbutton_8">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>10000</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>mpFit</string>
-             </property>
-             <property name="confirmAction">
-              <bool>false</bool>
-             </property>
-             <property name="program">
-              <string>edm</string>
-             </property>
-             <property name="arguments">
-              <stringlist>
-               <string>-x</string>
-               <string>-eolc</string>
-               <string>-m P=$(P):,R=cam1:,PORT=MPFT</string>
-               <string>/afs/slac/g/testfac/tools/display/mpfit/edl/mpFitADMain.edl</string>
-              </stringlist>
-             </property>
-             <property name="guiFile" stdset="0">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QEPushButton" name="qepushbutton_6">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>120</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>10000</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>AreaDetector</string>
-             </property>
-             <property name="program">
-              <string>edm</string>
-             </property>
-             <property name="arguments">
-              <stringlist>
-               <string>-x</string>
-               <string>-eolc</string>
-               <string>-m P=$(P):,R=cam1:,P2=$(P2),P3=$(P3),IOC=$(IOC)</string>
-               <string>/afs/slac/g/testfac/tools/display/areaD/edl/andor-asta.edl</string>
-              </stringlist>
-             </property>
-             <property name="guiFile" stdset="0">
-              <string/>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_5">
-        <property name="geometry">
-         <rect>
-          <x>9</x>
-          <y>128</y>
-          <width>380</width>
-          <height>96</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>380</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Trouble</string>
-        </property>
-        <layout class="QGridLayout" name="gridLayout_6">
-         <item row="0" column="0">
-          <layout class="QGridLayout" name="gridLayout_24">
-           <item row="1" column="0">
-            <widget class="QEPushButton" name="qepushbutton_10">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>Power Cycle Camera</string>
-             </property>
-             <property name="confirmAction">
-              <bool>true</bool>
-             </property>
-             <property name="program">
-              <string>/afs/slac/g/testfac/extras/scripts/rebootCamera.sh</string>
-             </property>
-             <property name="arguments">
-              <stringlist>
-               <string>$(P):</string>
-              </stringlist>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0">
-            <widget class="QEPushButton" name="qepushbutton_11">
-             <property name="text">
-              <string>Reboot IOC</string>
-             </property>
-             <property name="confirmAction">
-              <bool>true</bool>
-             </property>
-             <property name="program">
-              <string>ssh</string>
-             </property>
-             <property name="arguments">
-              <stringlist>
-               <string>ar-bigbird</string>
-               <string>/afs/slac/g/testfac/extras/scripts/iocRestartCamera.sh</string>
-               <string>$(IOC)</string>
-              </stringlist>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
-             <item>
-              <widget class="QLabel" name="label_9">
+            <layout class="QGridLayout" name="gridLayout_11">
+             <item row="0" column="0">
+              <widget class="QEPushButton" name="qepushbutton_4">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
+                 <width>120</width>
                  <height>0</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>60</width>
+                 <width>10000</width>
                  <height>16777215</height>
                 </size>
                </property>
                <property name="text">
-                <string>Power:</string>
+                <string>ImageJ</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+               <property name="program">
+                <string>/afs/slac/g/testfac/extras/scripts/startImageJ</string>
+               </property>
+               <property name="arguments">
+                <stringlist>
+                 <string>$(P)</string>
+                </stringlist>
+               </property>
+               <property name="guiFile" stdset="0">
+                <string/>
                </property>
               </widget>
              </item>
-             <item>
-              <widget class="QELabel" name="qelabel">
-               <property name="variable" stdset="0">
-                <string>$(P3)</string>
+             <item row="1" column="1">
+              <widget class="QEPushButton" name="qepushbutton_8">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
                </property>
-               <property name="variableSubstitutions" stdset="0">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>10000</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>mpFit</string>
+               </property>
+               <property name="confirmAction">
+                <bool>false</bool>
+               </property>
+               <property name="program">
+                <string>edm</string>
+               </property>
+               <property name="arguments">
+                <stringlist>
+                 <string>-x</string>
+                 <string>-eolc</string>
+                 <string>-m P=$(P):,R=cam1:,PORT=MPFT</string>
+                 <string>/afs/slac/g/testfac/tools/display/mpfit/edl/mpFitADMain.edl</string>
+                </stringlist>
+               </property>
+               <property name="guiFile" stdset="0">
                 <string/>
                </property>
-               <property name="displayAlarmStateOption" stdset="0">
-                <enum>QELabel::Never</enum>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QEPushButton" name="qepushbutton_6">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>10000</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>AreaDetector</string>
+               </property>
+               <property name="program">
+                <string>edm</string>
+               </property>
+               <property name="arguments">
+                <stringlist>
+                 <string>-x</string>
+                 <string>-eolc</string>
+                 <string>-m P=$(P):,R=cam1:,P2=$(P2),P3=$(P3),IOC=$(IOC)</string>
+                 <string>/afs/slac/g/testfac/tools/display/areaD/edl/andor-asta.edl</string>
+                </stringlist>
+               </property>
+               <property name="guiFile" stdset="0">
+                <string/>
                </property>
               </widget>
              </item>
             </layout>
            </item>
           </layout>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_7">
-        <property name="geometry">
-         <rect>
-          <x>9</x>
-          <y>239</y>
-          <width>380</width>
-          <height>125</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>350</width>
-          <height>125</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>380</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>Shutter</string>
-        </property>
-        <widget class="QWidget" name="layoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>359</width>
-           <height>56</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_30">
-          <item row="0" column="5">
-           <widget class="QELabel" name="qelabel_2">
-            <property name="variable" stdset="0">
-             <string>$(P):cam1:AndorShutterMode</string>
-            </property>
-            <property name="variableSubstitutions" stdset="0">
-             <string>P=ANDOR1</string>
-            </property>
-            <property name="displayAlarmStateOption" stdset="0">
-             <enum>QELabel::Never</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_10">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>130</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>10000</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Andor Shutter Mode</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QEComboBox" name="qecombobox_27">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>100</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="variable" stdset="0">
-             <string>$(P):cam1:AndorShutterMode</string>
-            </property>
-            <property name="variableSubstitutions" stdset="0">
-             <string>P=ANDOR1</string>
-            </property>
-            <property name="subscribe">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_12">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>0</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>10000</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Open/Close</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QELabel" name="qelabel_3">
-            <property name="variable" stdset="0">
-             <string>$(P):cam1:ShutterStatus_RBV</string>
-            </property>
-            <property name="variableSubstitutions" stdset="0">
-             <string>P=ANDOR1</string>
-            </property>
-            <property name="displayAlarmStateOption" stdset="0">
-             <enum>QELabel::Never</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
-            <item>
-             <widget class="QEPushButton" name="qepushbutton_22">
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QGroupBox" name="groupBox_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>125</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>280</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>More plugins</string>
+          </property>
+          <widget class="QWidget" name="gridLayoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>251</width>
+             <height>83</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_34">
+            <item row="0" column="0">
+             <widget class="QEPushButton" name="qepushbutton_25">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="maximumSize">
                <size>
-                <width>45</width>
+                <width>140</width>
                 <height>16777215</height>
                </size>
               </property>
               <property name="text">
-               <string>Open</string>
+               <string>Image</string>
               </property>
-              <property name="variable" stdset="0">
-               <string>$(P):cam1:ShutterControl</string>
+              <property name="program">
+               <string>edm</string>
               </property>
-              <property name="variableSubstitutions" stdset="0">
-               <string>P=ANDOR1</string>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):,R=image1:</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDStdArrays.edl</string>
+               </stringlist>
               </property>
-              <property name="pressText">
-               <string>1</string>
-              </property>
-              <property name="clickText">
-               <string>1</string>
+              <property name="guiFile" stdset="0">
+               <string/>
               </property>
              </widget>
             </item>
-            <item>
-             <widget class="QEPushButton" name="qepushbutton_3">
+            <item row="0" column="1">
+             <widget class="QEPushButton" name="qepushbutton_34">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="maximumSize">
                <size>
-                <width>45</width>
+                <width>140</width>
                 <height>16777215</height>
                </size>
               </property>
               <property name="text">
-               <string>Close</string>
+               <string>ROI 1</string>
               </property>
-              <property name="variable" stdset="0">
-               <string>$(P):cam1:ShutterControl</string>
+              <property name="program">
+               <string>edm</string>
               </property>
-              <property name="variableSubstitutions" stdset="0">
-               <string>P=ANDOR1</string>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):,R=ROI1:</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+               </stringlist>
               </property>
-              <property name="pressText">
-               <string>0</string>
+              <property name="guiFile" stdset="0">
+               <string/>
               </property>
-              <property name="clickText">
-               <string>0</string>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QEPushButton" name="qepushbutton_47">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>ROI 2</string>
+              </property>
+              <property name="program">
+               <string>edm</string>
+              </property>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):,R=ROI2:</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+               </stringlist>
+              </property>
+              <property name="guiFile" stdset="0">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QEPushButton" name="qepushbutton_29">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Process</string>
+              </property>
+              <property name="program">
+               <string>edm</string>
+              </property>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):,R=Proc1:</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDProcess.edl</string>
+               </stringlist>
+              </property>
+              <property name="guiFile" stdset="0">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QEPushButton" name="qepushbutton_26">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>All</string>
+              </property>
+              <property name="program">
+               <string>edm</string>
+              </property>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcCommonPlugins.edl</string>
+               </stringlist>
+              </property>
+              <property name="guiFile" stdset="0">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QEPushButton" name="qepushbutton_48">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>120</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>140</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>ROI 3</string>
+              </property>
+              <property name="program">
+               <string>edm</string>
+              </property>
+              <property name="arguments">
+               <stringlist>
+                <string>-x</string>
+                <string>-eolc</string>
+                <string>-m P=$(P):,R=ROI3:</string>
+                <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
+               </stringlist>
+              </property>
+              <property name="guiFile" stdset="0">
+               <string/>
               </property>
              </widget>
             </item>
            </layout>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-       <widget class="QGroupBox" name="groupBox_4">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>10</y>
-          <width>270</width>
-          <height>96</height>
-         </rect>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>280</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="title">
-         <string>More plugins</string>
-        </property>
-        <widget class="QWidget" name="gridLayoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>30</y>
-           <width>251</width>
-           <height>54</height>
-          </rect>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_34">
-          <item row="0" column="0">
-           <widget class="QEPushButton" name="qepushbutton_25">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>140</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Image</string>
-            </property>
-            <property name="program">
-             <string>edm</string>
-            </property>
-            <property name="arguments">
-             <stringlist>
-              <string>-x</string>
-              <string>-eolc</string>
-              <string>-m P=$(P):,R=image1:</string>
-              <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDStdArrays.edl</string>
-             </stringlist>
-            </property>
-            <property name="guiFile" stdset="0">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QEPushButton" name="qepushbutton_29">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>140</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>Process</string>
-            </property>
-            <property name="program">
-             <string>edm</string>
-            </property>
-            <property name="arguments">
-             <stringlist>
-              <string>-x</string>
-              <string>-eolc</string>
-              <string>-m P=$(P):,R=Proc1:</string>
-              <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDProcess.edl</string>
-             </stringlist>
-            </property>
-            <property name="guiFile" stdset="0">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QEPushButton" name="qepushbutton_26">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>140</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>All</string>
-            </property>
-            <property name="program">
-             <string>edm</string>
-            </property>
-            <property name="arguments">
-             <stringlist>
-              <string>-x</string>
-              <string>-eolc</string>
-              <string>-m P=$(P):</string>
-              <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcCommonPlugins.edl</string>
-             </stringlist>
-            </property>
-            <property name="guiFile" stdset="0">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QEPushButton" name="qepushbutton_34">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimumSize">
-             <size>
-              <width>120</width>
-              <height>0</height>
-             </size>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>140</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="text">
-             <string>ROI</string>
-            </property>
-            <property name="program">
-             <string>edm</string>
-            </property>
-            <property name="arguments">
-             <stringlist>
-              <string>-x</string>
-              <string>-eolc</string>
-              <string>-m P=$(P):,R=ROI1:</string>
-              <string>/afs/slac/g/testfac/tools/display/areaD/edl/gcNDROI.edl</string>
-             </stringlist>
-            </property>
-            <property name="guiFile" stdset="0">
-             <string/>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </widget>
+          </widget>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>350</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>380</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Shutter</string>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>359</width>
+             <height>56</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_30">
+            <item row="0" column="5">
+             <widget class="QELabel" name="qelabel_2">
+              <property name="variable" stdset="0">
+               <string>$(P):cam1:AndorShutterMode</string>
+              </property>
+              <property name="variableSubstitutions" stdset="0">
+               <string>P=ANDOR1</string>
+              </property>
+              <property name="displayAlarmStateOption" stdset="0">
+               <enum>QELabel::Never</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>130</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Andor Shutter Mode</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QEComboBox" name="qecombobox_27">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>100</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="variable" stdset="0">
+               <string>$(P):cam1:AndorShutterMode</string>
+              </property>
+              <property name="variableSubstitutions" stdset="0">
+               <string>P=ANDOR1</string>
+              </property>
+              <property name="subscribe">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>10000</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Open/Close</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QELabel" name="qelabel_3">
+              <property name="variable" stdset="0">
+               <string>$(P):cam1:ShutterStatus_RBV</string>
+              </property>
+              <property name="variableSubstitutions" stdset="0">
+               <string>P=ANDOR1</string>
+              </property>
+              <property name="displayAlarmStateOption" stdset="0">
+               <enum>QELabel::Never</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <widget class="QEPushButton" name="qepushbutton_22">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>45</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Open</string>
+                </property>
+                <property name="variable" stdset="0">
+                 <string>$(P):cam1:ShutterControl</string>
+                </property>
+                <property name="variableSubstitutions" stdset="0">
+                 <string>P=ANDOR1</string>
+                </property>
+                <property name="pressText">
+                 <string>1</string>
+                </property>
+                <property name="clickText">
+                 <string>1</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QEPushButton" name="qepushbutton_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>45</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Close</string>
+                </property>
+                <property name="variable" stdset="0">
+                 <string>$(P):cam1:ShutterControl</string>
+                </property>
+                <property name="variableSubstitutions" stdset="0">
+                 <string>P=ANDOR1</string>
+                </property>
+                <property name="pressText">
+                 <string>0</string>
+                </property>
+                <property name="clickText">
+                 <string>0</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+          <zorder>layoutWidget</zorder>
+          <zorder>groupBox_5</zorder>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGroupBox" name="groupBox_5">
+          <property name="minimumSize">
+           <size>
+            <width>380</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>280</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Trouble</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <layout class="QGridLayout" name="gridLayout_24">
+             <item row="1" column="0">
+              <widget class="QEPushButton" name="qepushbutton_10">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Power Cycle Camera</string>
+               </property>
+               <property name="confirmAction">
+                <bool>true</bool>
+               </property>
+               <property name="program">
+                <string>/afs/slac/g/testfac/extras/scripts/rebootCamera.sh</string>
+               </property>
+               <property name="arguments">
+                <stringlist>
+                 <string>$(P):</string>
+                </stringlist>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QEPushButton" name="qepushbutton_11">
+               <property name="text">
+                <string>Reboot IOC</string>
+               </property>
+               <property name="confirmAction">
+                <bool>true</bool>
+               </property>
+               <property name="program">
+                <string>ssh</string>
+               </property>
+               <property name="arguments">
+                <stringlist>
+                 <string>ar-bigbird</string>
+                 <string>/afs/slac/g/testfac/extras/scripts/iocRestartCamera.sh</string>
+                 <string>$(IOC)</string>
+                </stringlist>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <layout class="QHBoxLayout" name="horizontalLayout_8">
+               <item>
+                <widget class="QLabel" name="label_9">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>60</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Power:</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QELabel" name="qelabel">
+                 <property name="variable" stdset="0">
+                  <string>$(P3)</string>
+                 </property>
+                 <property name="variableSubstitutions" stdset="0">
+                  <string/>
+                 </property>
+                 <property name="displayAlarmStateOption" stdset="0">
+                  <enum>QELabel::Never</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>

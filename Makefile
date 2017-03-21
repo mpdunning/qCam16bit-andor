@@ -15,7 +15,7 @@ CXX           = g++
 DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
 CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)
-INCPATH       = -I../../../../qt/qt-5.3.2/mkspecs/linux-g++ -I. -I. -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEAbstractWidget -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEForm -I../../../../qt/esa/epicsqt-3.1.0/framework/api -I../../../../qt/esa/epicsqt-3.1.0/framework/data -I../../../../qt/esa/epicsqt-3.1.0/framework/common -I../../../../qt/qt-5.3.2/include/QtXml -I../../../../qt/qwt-6.1.2/src -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELabel -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEComboBox -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QESpinBox -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus -I../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage -I../../../../qt/qt-5.3.2/include -I../../../../qt/qt-5.3.2/include/QtWidgets -I../../../../qt/qt-5.3.2/include/QtGui -I../../../../qt/qt-5.3.2/include/QtCore -Imoc -I.
+INCPATH       = -I../../../../qt/qt-5.3.2/mkspecs/linux-g++ -I. -I. -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEAbstractWidget -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEForm -I../../../../qt/epicsqt-3.3.1/framework/api -I../../../../qt/epicsqt-3.3.1/framework/data -I../../../../qt/epicsqt-3.3.1/framework/common -I../../../../qt/qt-5.3.2/include/QtXml -I../../../../qt/qwt-6.1.2/src -I../../../../qt/epicsqt-3.3.1/framework/widgets/QELabel -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEComboBox -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEButton -I../../../../qt/epicsqt-3.3.1/framework/widgets/QELineEdit -I../../../../qt/epicsqt-3.3.1/framework/widgets/QESpinBox -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEBitStatus -I../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage -I../../../../qt/qt-5.3.2/include -I../../../../qt/qt-5.3.2/include/QtWidgets -I../../../../qt/qt-5.3.2/include/QtGui -I../../../../qt/qt-5.3.2/include/QtCore -Imoc -I.
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/afs/slac/g/testfac/tools/qt/qt-5.3.2/lib
 LIBS          = $(SUBLIBS) -L/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/designer -lQEPlugin -L/afs/slac/g/testfac/tools/qt/qt-5.3.2/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread 
@@ -554,48 +554,49 @@ moc/moc_mainwindow.cpp: ../../../../qt/qt-5.3.2/include/QtWidgets/QMainWindow \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qtabwidget.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEForm/QEForm.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEForm/QEForm.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QScrollArea \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -604,150 +605,34 @@ moc/moc_mainwindow.cpp: ../../../../qt/qt-5.3.2/include/QtWidgets/QMainWindow \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEFileMonitor.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFileMonitor.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
 		ui_mainwindow.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QApplication \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qapplication.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qcoreapplication.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qeventloop.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qdesktopwidget.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qguiapplication.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qinputmethod.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QButtonGroup \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qbuttongroup.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFormLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qformlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayoutitem.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qboxlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgridlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFrame \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGridLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGroupBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgroupbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHBoxLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHeaderView \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qheaderview.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemview.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qabstractitemmodel.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qitemselectionmodel.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyleoption.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qvalidator.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qregularexpression.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyle.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtabbar.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qrubberband.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpacerItem \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QTabWidget \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QVBoxLayout \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QRect \
-		../../../../qt/qt-5.3.2/include/QtGui/QPainter \
-		../../../../qt/qt-5.3.2/include/QtGui/qpainter.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextoption.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qpen.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QBrush \
-		../../../../qt/qt-5.3.2/include/QtGui/QPen \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QEBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QVector \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEComboBox/QEComboBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QComboBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcombobox.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEOneToOne.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImage.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/videowidget.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageMarkup.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupItem.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QMouseEvent \
-		../../../../qt/qt-5.3.2/include/QtGui/QCursor \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QToolBar \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtoolbar.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/zoomMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageContextMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/flipRotateMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/selectMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupDisplayMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImageOptionsDialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEDialog.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDialog \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qdialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/brightnessContrast.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QCheckBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcheckbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractbutton.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSlider \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpinBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QIntValidator \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QPushButton \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qpushbutton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/applicationLauncher.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QImage \
-		../../../../qt/qt-5.3.2/include/QtCore/QProcess \
-		../../../../qt/qt-5.3.2/include/QtCore/qprocess.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QTemporaryFile \
-		../../../../qt/qt-5.3.2/include/QtCore/qtemporaryfile.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageDataFormats.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloatingFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/fullScreenWindow.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/recording.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QByteArray \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProcessor.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QThread \
-		../../../../qt/qt-5.3.2/include/QtCore/qthread.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QWaitCondition \
-		../../../../qt/qt-5.3.2/include/QtCore/qwaitcondition.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QReadWriteLock \
-		../../../../qt/qt-5.3.2/include/QtCore/qreadwritelock.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/mpeg.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELabel/QELabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/managePixmaps.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QPixmap \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QELineEdit.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLineEdit \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlineedit.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextcursor.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextformat.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QEGenericEdit.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEPushButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEGenericButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QESpinBox/QESpinBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDoubleSpinBox \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloating.h \
 		mainwindow.h
-	/afs/slac/g/testfac/tools/qt/qt-5.3.2/bin/moc $(DEFINES) -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/mkspecs/linux-g++ -I/afs/slac.stanford.edu/g/testfac/vol5/tools/display/qCam/ui-3.1.0/qCam16bit-andor -I/afs/slac.stanford.edu/g/testfac/vol5/tools/display/qCam/ui-3.1.0/qCam16bit-andor -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEAbstractWidget -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEWidget -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEForm -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/api -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/data -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/common -I/afs/slac/g/testfac/tools/qt/esb/qt/include/QtXml -I/afs/slac/g/testfac/tools/qt/esb/qwt/src -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QELabel -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEComboBox -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEButton -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QELineEdit -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QESpinBox -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEBitStatus -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEImage -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtWidgets -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtGui -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtCore -I/usr/include/c++/4.4.7 -I/usr/include/c++/4.4.7/x86_64-redhat-linux -I/usr/include/c++/4.4.7/backward -I/usr/local/include -I/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -I/usr/include mainwindow.h -o moc/moc_mainwindow.cpp
+	/afs/slac/g/testfac/tools/qt/qt-5.3.2/bin/moc $(DEFINES) -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/mkspecs/linux-g++ -I/afs/slac.stanford.edu/g/testfac/vol5/tools/display/qCam/ui-3.3.1/qCam16bit-andor -I/afs/slac.stanford.edu/g/testfac/vol5/tools/display/qCam/ui-3.3.1/qCam16bit-andor -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEAbstractWidget -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEWidget -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEForm -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/api -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/data -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/common -I/afs/slac/g/testfac/tools/qt/esb/qt/include/QtXml -I/afs/slac/g/testfac/tools/qt/esb/qwt/src -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QELabel -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEComboBox -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEButton -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QELineEdit -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QESpinBox -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEBitStatus -I/afs/slac/g/testfac/tools/qt/esb/epicsqt/framework/widgets/QEImage -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtWidgets -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtGui -I/afs/slac/g/testfac/tools/qt/qt-5.3.2/include/QtCore -I/usr/include/c++/4.4.7 -I/usr/include/c++/4.4.7/x86_64-redhat-linux -I/usr/include/c++/4.4.7/backward -I/usr/local/include -I/usr/lib/gcc/x86_64-redhat-linux/4.4.7/include -I/usr/include mainwindow.h -o moc/moc_mainwindow.cpp
 
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
@@ -755,14 +640,14 @@ compiler_uic_make_all: ui_mainwindow.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h
 ui_mainwindow.h: mainwindow.ui \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QEBitStatus.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEComboBox/QEComboBox.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImage.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELabel/QELabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QELineEdit.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEPushButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QESpinBox/QESpinBox.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QBitStatus.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEBitStatus/QEBitStatus.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEComboBox/QEComboBox.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/QEImage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QELabel/QELabel.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QELineEdit/QELineEdit.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEButton/QEPushButton.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QESpinBox/QESpinBox.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEBitStatus/QBitStatus.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/qstring.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qchar.h \
@@ -805,7 +690,7 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qiterator.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qlist.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qpoint.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QBitStatus.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEBitStatus/QBitStatus.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QRect \
 		../../../../qt/qt-5.3.2/include/QtCore/qrect.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qmargins.h \
@@ -873,40 +758,40 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qfiledevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvector2d.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -915,29 +800,32 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEInteger.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEIntegerFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QComboBox \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qcombobox.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qwidget.h \
@@ -1053,43 +941,44 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qrubberband.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qabstractitemmodel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEOneToOne.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEOneToOne.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QXmlDefaultHandler \
@@ -1097,29 +986,32 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEInteger.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEIntegerFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QScrollArea \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractscrollarea.h \
@@ -1223,41 +1115,42 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qfiledevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvector2d.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -1266,32 +1159,34 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/videowidget.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageMarkup.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupItem.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEInteger.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEIntegerFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/videowidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageMarkup.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/markupItem.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QPainter \
 		../../../../qt/qt-5.3.2/include/QtGui/qpainter.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtextoption.h \
@@ -1306,22 +1201,22 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QGridLayout \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QToolBar \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qtoolbar.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/zoomMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageContextMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/flipRotateMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/selectMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupDisplayMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImageOptionsDialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEDialog.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/zoomMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageContextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/flipRotateMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/selectMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/markupDisplayMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/QEImageOptionsDialog.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEDialog.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QDialog \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qdialog.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QRect \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageInfo.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QFrame \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/brightnessContrast.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/brightnessContrast.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QCheckBox \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qcheckbox.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractbutton.h \
@@ -1336,29 +1231,29 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtGui/QIntValidator \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QPushButton \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qpushbutton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/applicationLauncher.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/applicationLauncher.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QImage \
 		../../../../qt/qt-5.3.2/include/QtCore/QProcess \
 		../../../../qt/qt-5.3.2/include/QtCore/qprocess.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QTemporaryFile \
 		../../../../qt/qt-5.3.2/include/QtCore/qtemporaryfile.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageDataFormats.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloatingFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/fullScreenWindow.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageDataFormats.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEFloatingFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/fullScreenWindow.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMainWindow \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmainwindow.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qtabwidget.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/recording.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/recording.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QByteArray \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProcessor.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/imageProcessor.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QThread \
 		../../../../qt/qt-5.3.2/include/QtCore/qthread.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QWaitCondition \
 		../../../../qt/qt-5.3.2/include/QtCore/qwaitcondition.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QReadWriteLock \
 		../../../../qt/qt-5.3.2/include/QtCore/qreadwritelock.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/mpeg.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEImage/mpeg.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
@@ -1461,41 +1356,42 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qfiledevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvector2d.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -1504,31 +1400,34 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/managePixmaps.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/managePixmaps.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QPixmap \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEStringFormattingMethods.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLineEdit \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlineedit.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
@@ -1635,41 +1534,42 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtGui/qtextformat.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qpen.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtextoption.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -1678,30 +1578,33 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QEGenericEdit.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEStringFormattingMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QELineEdit/QEGenericEdit.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QPushButton \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qpushbutton.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractbutton.h \
@@ -1805,41 +1708,42 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qfiledevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvector2d.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -1848,46 +1752,53 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEForm/QEForm.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEForm/QEForm.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QScrollArea \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEFileMonitor.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/managePixmaps.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFileMonitor.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/managePixmaps.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QPixmap \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEGenericButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/applicationLauncher.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEButton/QEGenericButton.h \
+		../../../../qt/qt-5.3.2/include/QtWidgets/QAbstractButton \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEInteger.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEIntegerFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEStringFormattingMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/applicationLauncher.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QImage \
 		../../../../qt/qt-5.3.2/include/QtCore/QProcess \
 		../../../../qt/qt-5.3.2/include/QtCore/qprocess.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QTemporaryFile \
 		../../../../qt/qt-5.3.2/include/QtCore/qtemporaryfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidgetProperties.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QDoubleSpinBox \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qspinbox.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractspinbox.h \
@@ -1992,41 +1903,42 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvalidator.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qregularexpression.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -2035,30 +1947,33 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloating.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloatingFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEFloating.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEFloatingFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QESingleVariableMethods.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/qstring.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qchar.h \
@@ -2167,7 +2082,7 @@ ui_mainwindow.h: mainwindow.ui \
 		../../../../qt/qt-5.3.2/include/QtCore/qfiledevice.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qvector2d.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h
 	/afs/slac/g/testfac/tools/qt/qt-5.3.2/bin/uic mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
@@ -2298,47 +2213,48 @@ obj/main.o: main.cpp ../../../../qt/qt-5.3.2/include/QtWidgets/QApplication \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmainwindow.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qtabwidget.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEForm/QEForm.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEForm/QEForm.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QScrollArea \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -2347,141 +2263,32 @@ obj/main.o: main.cpp ../../../../qt/qt-5.3.2/include/QtWidgets/QApplication \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEFileMonitor.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
-		ui_mainwindow.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QButtonGroup \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qbuttongroup.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFormLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qformlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayoutitem.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qboxlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgridlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFrame \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGridLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGroupBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgroupbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHBoxLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHeaderView \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qheaderview.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemview.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qabstractitemmodel.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qitemselectionmodel.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyleoption.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qvalidator.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qregularexpression.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyle.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtabbar.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qrubberband.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpacerItem \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QTabWidget \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QVBoxLayout \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QRect \
-		../../../../qt/qt-5.3.2/include/QtGui/QPainter \
-		../../../../qt/qt-5.3.2/include/QtGui/qpainter.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextoption.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qpen.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QBrush \
-		../../../../qt/qt-5.3.2/include/QtGui/QPen \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QEBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QVector \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEComboBox/QEComboBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QComboBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcombobox.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEOneToOne.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImage.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/videowidget.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageMarkup.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupItem.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QMouseEvent \
-		../../../../qt/qt-5.3.2/include/QtGui/QCursor \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QToolBar \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtoolbar.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/zoomMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageContextMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/flipRotateMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/selectMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupDisplayMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImageOptionsDialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEDialog.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDialog \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qdialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/brightnessContrast.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QCheckBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcheckbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractbutton.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSlider \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpinBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QIntValidator \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QPushButton \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qpushbutton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/applicationLauncher.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QImage \
-		../../../../qt/qt-5.3.2/include/QtCore/QProcess \
-		../../../../qt/qt-5.3.2/include/QtCore/qprocess.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QTemporaryFile \
-		../../../../qt/qt-5.3.2/include/QtCore/qtemporaryfile.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageDataFormats.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloatingFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/fullScreenWindow.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/recording.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QByteArray \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProcessor.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QThread \
-		../../../../qt/qt-5.3.2/include/QtCore/qthread.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QWaitCondition \
-		../../../../qt/qt-5.3.2/include/QtCore/qwaitcondition.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QReadWriteLock \
-		../../../../qt/qt-5.3.2/include/QtCore/qreadwritelock.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/mpeg.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELabel/QELabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/managePixmaps.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QPixmap \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QELineEdit.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLineEdit \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlineedit.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextcursor.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextformat.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QEGenericEdit.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEPushButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEGenericButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QESpinBox/QESpinBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDoubleSpinBox \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloating.h
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFileMonitor.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/main.o main.cpp
 
 obj/mainwindow.o: mainwindow.cpp ../../../../qt/qt-5.3.2/include/QtCore/QDebug \
@@ -2589,47 +2396,48 @@ obj/mainwindow.o: mainwindow.cpp ../../../../qt/qt-5.3.2/include/QtCore/QDebug \
 		../../../../qt/qt-5.3.2/include/QtGui/qtouchdevice.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qtabwidget.h \
 		../../../../qt/qt-5.3.2/include/QtGui/qicon.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEForm/QEForm.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEForm/QEForm.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QScrollArea \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractscrollarea.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qframe.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEAbstractWidget/QEAbstractWidget.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QWidget \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEWidget.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEWidget.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QList \
 		../../../../qt/qt-5.3.2/include/QtCore/QObject \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaObject.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMutex \
 		../../../../qt/qt-5.3.2/include/QtCore/QTimer \
 		../../../../qt/qt-5.3.2/include/QtCore/qtimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/qbasictimer.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QString \
 		../../../../qt/qt-5.3.2/include/QtCore/QStringList \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaObject.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/Generic.h \
+		../../../../qt/qt-5.3.2/include/QtCore/QVector \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaObject.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/Generic.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtGlobal \
-		../../../../qt/esa/epicsqt-3.1.0/framework/api/CaRef.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaStateMachine.h \
+		../../../../qt/epicsqt-3.3.1/framework/api/CaRef.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaStateMachine.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QtDebug \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventFilter.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaEventUpdate.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventFilter.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaEventUpdate.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QEvent \
 		../../../../qt/qt-5.3.2/include/QtCore/QVariant \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/UserMessage.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/UserMessage.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QMetaType \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEPluginLibrary_global.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaAlarmInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaDateTime.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEPluginLibrary_global.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaAlarmInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaDateTime.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDateTime \
 		../../../../qt/qt-5.3.2/include/QtCore/qdatetime.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaConnectionInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/VariableNameManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/ContainerProfile.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaConnectionInfo.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/VariableNameManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/ContainerProfile.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSharedMemory \
 		../../../../qt/qt-5.3.2/include/QtCore/qsharedmemory.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/persistanceManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/persistanceManager.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QHash \
 		../../../../qt/qt-5.3.2/include/QtCore/QXmlStreamWriter \
 		../../../../qt/qt-5.3.2/include/QtCore/qxmlstream.h \
@@ -2638,148 +2446,32 @@ obj/mainwindow.o: mainwindow.cpp ../../../../qt/qt-5.3.2/include/QtCore/QDebug \
 		../../../../qt/qt-5.3.2/include/QtXml/qtxmlglobal.h \
 		../../../../qt/qt-5.3.2/include/QtXml/QDomDocument \
 		../../../../qt/qt-5.3.2/include/QtXml/qdom.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEToolTip.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEString.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEStringFormatting.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEEmitter.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEToolTip.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEString.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QEStringFormatting.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QDataStream \
 		../../../../qt/qt-5.3.2/include/QtCore/QTextStream \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QELocalEnumeration.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEDragDrop.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QELocalEnumeration.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/QEDragDrop.h \
 		../../../../qt/qt-5.3.2/include/QtGui/QDragEnterEvent \
 		../../../../qt/qt-5.3.2/include/QtGui/QDropEvent \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/styleManager.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/contextMenu.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/styleManager.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/contextMenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QMenu \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qmenu.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qaction.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qactiongroup.h \
 		../../../../qt/qt-5.3.2/include/QtCore/QSet \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEActionRequests.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEActionRequests.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QAction \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/standardProperties.h \
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFormMapper.h \
+		../../../../qt/epicsqt-3.3.1/framework/widgets/QEWidget/standardProperties.h \
 		../../../../qt/qt-5.3.2/include/QtWidgets/QLabel \
 		../../../../qt/qt-5.3.2/include/QtWidgets/qlabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEFileMonitor.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QCaVariableNamePropertyManager.h \
-		ui_mainwindow.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QApplication \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qapplication.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qcoreapplication.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qeventloop.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qdesktopwidget.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qguiapplication.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qinputmethod.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QButtonGroup \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qbuttongroup.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFormLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qformlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlayoutitem.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qboxlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgridlayout.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QFrame \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGridLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QGroupBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qgroupbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHBoxLayout \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QHeaderView \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qheaderview.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemview.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qabstractitemmodel.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qitemselectionmodel.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractitemdelegate.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyleoption.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qvalidator.h \
-		../../../../qt/qt-5.3.2/include/QtCore/qregularexpression.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractslider.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qstyle.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtabbar.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qrubberband.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpacerItem \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QTabWidget \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QVBoxLayout \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QRect \
-		../../../../qt/qt-5.3.2/include/QtGui/QPainter \
-		../../../../qt/qt-5.3.2/include/QtGui/qpainter.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextoption.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qpen.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QBrush \
-		../../../../qt/qt-5.3.2/include/QtGui/QPen \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEBitStatus/QEBitStatus.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QVector \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEInteger.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEIntegerFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEComboBox/QEComboBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QComboBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcombobox.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEOneToOne.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImage.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/videowidget.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageMarkup.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupItem.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QMouseEvent \
-		../../../../qt/qt-5.3.2/include/QtGui/QCursor \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QToolBar \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qtoolbar.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/zoomMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageContextMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/flipRotateMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/selectMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/markupDisplayMenu.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/QEImageOptionsDialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/common/QEDialog.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDialog \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qdialog.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageInfo.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/brightnessContrast.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QCheckBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qcheckbox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qabstractbutton.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSlider \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QSpinBox \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qspinbox.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QIntValidator \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QPushButton \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qpushbutton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/applicationLauncher.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QImage \
-		../../../../qt/qt-5.3.2/include/QtCore/QProcess \
-		../../../../qt/qt-5.3.2/include/QtCore/qprocess.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QTemporaryFile \
-		../../../../qt/qt-5.3.2/include/QtCore/qtemporaryfile.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageDataFormats.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloatingFormatting.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/fullScreenWindow.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/recording.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QByteArray \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProperties.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/imageProcessor.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QThread \
-		../../../../qt/qt-5.3.2/include/QtCore/qthread.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QWaitCondition \
-		../../../../qt/qt-5.3.2/include/QtCore/qwaitcondition.h \
-		../../../../qt/qt-5.3.2/include/QtCore/QReadWriteLock \
-		../../../../qt/qt-5.3.2/include/QtCore/qreadwritelock.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEImage/mpeg.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELabel/QELabel.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/managePixmaps.h \
-		../../../../qt/qt-5.3.2/include/QtGui/QPixmap \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEWidget/QEStringFormattingMethods.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QELineEdit.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QLineEdit \
-		../../../../qt/qt-5.3.2/include/QtWidgets/qlineedit.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextcursor.h \
-		../../../../qt/qt-5.3.2/include/QtGui/qtextformat.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QELineEdit/QEGenericEdit.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEPushButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QEButton/QEGenericButton.h \
-		../../../../qt/esa/epicsqt-3.1.0/framework/widgets/QESpinBox/QESpinBox.h \
-		../../../../qt/qt-5.3.2/include/QtWidgets/QDoubleSpinBox \
-		../../../../qt/esa/epicsqt-3.1.0/framework/data/QEFloating.h
+		../../../../qt/epicsqt-3.3.1/framework/common/QEFileMonitor.h \
+		../../../../qt/epicsqt-3.3.1/framework/data/QCaVariableNamePropertyManager.h \
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/mainwindow.o mainwindow.cpp
 
 obj/qrc_resources.o: resource/qrc_resources.cpp 
